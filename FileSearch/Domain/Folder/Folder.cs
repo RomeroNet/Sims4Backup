@@ -2,5 +2,5 @@
 
 public class Folder(string path)
 {
-    public string Path { get; private set; } = path;
+    public string Path { get; } = path;
 }

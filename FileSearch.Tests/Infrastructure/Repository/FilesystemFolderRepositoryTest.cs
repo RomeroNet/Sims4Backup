@@ -1,4 +1,5 @@
-﻿using FileSearch.Domain.Folder;
+﻿using System.ComponentModel;
+using FileSearch.Domain.Folder;
 using FileSearch.Infrastructure.Repository;
 
 namespace FileSearch.Tests.Infrastructure.Repository;
@@ -23,5 +24,13 @@ public class FilesystemFolderRepositoryTest
         var result = repository.GetFolderByType(FolderTypeEnum.Saves);
 
         Assert.Equal(@"C:\Users\frome\Documents\Electronic Arts\Los Sims 4\saves", result.Path);
+    }
+
+    [Fact]
+    public void ItShouldThrowExceptionIfEnumValueIsInvalid()
+    {
+        var repository = new FilesystemFolderRepository();
+        
+        Assert.Throws<InvalidEnumArgumentException>(() => repository.GetFolderByType((FolderTypeEnum)99));
     }
 }
