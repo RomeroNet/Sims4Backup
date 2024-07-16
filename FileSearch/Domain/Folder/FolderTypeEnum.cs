@@ -2,6 +2,6 @@
 
 public enum FolderTypeEnum
 {
-    MODS,
-    SAVES,
+    Mods,
+    Saves
 }

@@ -6,14 +6,14 @@ namespace FileSearch.Infrastructure.Repository;
 public class FilesystemFolderRepository : IFolderRepository
 {
     private const string ElectronicArtsFolder = @"\Electronic Arts";
-    private const string GameFolderSearchPattern = @"*Sims 4";
+    private const string GameFolderSearchPattern = "*Sims 4";
     private const string ModsFolder = @"\Mods";
     private const string SavesFolder = @"\saves";
 
     public Folder GetFolderByType(FolderTypeEnum type) => type switch
     {
-        FolderTypeEnum.MODS => new Folder(GetGamePath() + ModsFolder),
-        FolderTypeEnum.SAVES => new Folder(GetGamePath() + SavesFolder),
+        FolderTypeEnum.Mods => new Folder(GetGamePath() + ModsFolder),
+        FolderTypeEnum.Saves => new Folder(GetGamePath() + SavesFolder),
         _ => throw new InvalidEnumArgumentException()
     };
 

@@ -13,11 +13,11 @@ public class FindFolderByNameTest
 
         var folder = new Folder("");
 
-        repositoryMock.Setup(repository => repository.GetFolderByType(FolderTypeEnum.MODS)).Returns(folder);
+        repositoryMock.Setup(repository => repository.GetFolderByType(FolderTypeEnum.Mods)).Returns(folder);
 
         var service = new FindFolderByType(repositoryMock.Object);
 
-        var result = service.Find(FolderTypeEnum.MODS);
+        var result = service.Find(FolderTypeEnum.Mods);
         
         Assert.Same(folder, result);
     }

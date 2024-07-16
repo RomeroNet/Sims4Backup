@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace FileSearch.Domain.Folder;
+﻿namespace FileSearch.Domain.Folder;
 
 public class Folder(string path)
 {

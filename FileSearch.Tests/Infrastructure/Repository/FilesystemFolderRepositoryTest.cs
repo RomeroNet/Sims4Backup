@@ -10,7 +10,7 @@ public class FilesystemFolderRepositoryTest
     {
         var repository = new FilesystemFolderRepository();
 
-        var result = repository.GetFolderByType(FolderTypeEnum.MODS);
+        var result = repository.GetFolderByType(FolderTypeEnum.Mods);
 
         Assert.Equal(@"C:\Users\frome\Documents\Electronic Arts\Los Sims 4\Mods", result.Path);
     }
@@ -20,7 +20,7 @@ public class FilesystemFolderRepositoryTest
     {
         var repository = new FilesystemFolderRepository();
 
-        var result = repository.GetFolderByType(FolderTypeEnum.SAVES);
+        var result = repository.GetFolderByType(FolderTypeEnum.Saves);
 
         Assert.Equal(@"C:\Users\frome\Documents\Electronic Arts\Los Sims 4\saves", result.Path);
     }
